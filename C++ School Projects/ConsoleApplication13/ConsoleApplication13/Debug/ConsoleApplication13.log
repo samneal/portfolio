@@ -1,0 +1,26 @@
+﻿Build started 4/22/2015 12:01:44 PM.
+     1>Project "\\students.sonas.lscs-inst.prv\appsensestudents$\saneal\my documents\visual studio 2013\Projects\ConsoleApplication13\ConsoleApplication13\ConsoleApplication13.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication13.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleApplication13.cpp memberType.cpp
+         memberType.cpp
+         ConsoleApplication13.cpp
+         Generating Code...
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\students.sonas.lscs-inst.prv\appsensestudents$\saneal\my documents\visual studio 2013\Projects\ConsoleApplication13\Debug\ConsoleApplication13.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\students.sonas.lscs-inst.prv\appsensestudents$\saneal\my documents\visual studio 2013\Projects\ConsoleApplication13\Debug\ConsoleApplication13.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\students.sonas.lscs-inst.prv\appsensestudents$\saneal\my documents\visual studio 2013\Projects\ConsoleApplication13\Debug\ConsoleApplication13.lib" /MACHINE:X86 Debug\ConsoleApplication13.obj
+         Debug\memberType.obj
+         Debug\stdafx.obj
+     1>memberType.obj : error LNK2005: "public: __thiscall memberType::memberType(void)" (??0memberType@@QAE@XZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: int __thiscall memberType::getBooks(void)" (?getBooks@memberType@@QAEHXZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall memberType::getID(void)" (?getID@memberType@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall memberType::getName(void)" (?getName@memberType@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: double __thiscall memberType::getSpent(void)" (?getSpent@memberType@@QAENXZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: void __thiscall memberType::setBooks(void)" (?setBooks@memberType@@QAEXXZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: void __thiscall memberType::setID(void)" (?setID@memberType@@QAEXXZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: void __thiscall memberType::setName(void)" (?setName@memberType@@QAEXXZ) already defined in ConsoleApplication13.obj
+     1>memberType.obj : error LNK2005: "public: void __thiscall memberType::setSpent(void)" (?setSpent@memberType@@QAEXXZ) already defined in ConsoleApplication13.obj
+     1>\\students.sonas.lscs-inst.prv\appsensestudents$\saneal\my documents\visual studio 2013\Projects\ConsoleApplication13\Debug\ConsoleApplication13.exe : fatal error LNK1169: one or more multiply defined symbols found
+     1>Done Building Project "\\students.sonas.lscs-inst.prv\appsensestudents$\saneal\my documents\visual studio 2013\Projects\ConsoleApplication13\ConsoleApplication13\ConsoleApplication13.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.35
