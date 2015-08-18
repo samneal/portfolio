@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class redY : MonoBehaviour {
-	public float redMinHealth = spawnRed.redMinHealth;
-	public float redMinAttack = spawnRed.redMinAttack;
+	public float redMinHealth;
+	public float redMinAttack;
 	
 	private float enemyAttack;
 	public GameObject enemyMinion;
@@ -15,13 +15,14 @@ public class redY : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		redMinHealth = spawnRed.redMinHealth;
+		redMinAttack = spawnRed.redMinAttack;
 	}
 
 	void OnCollisionEnter(Collision cc){
 		
 		if (cc.gameObject.tag == "blueMinion") {
-			enemyAttack = enemyMinion.GetComponent<blueY>().blueMinAttack;
+			enemyAttack = spawnBlue.blueMinAttack;
 			redMinHealth = redMinHealth - enemyAttack;
 			if(redMinHealth <= 0){
 				Destroy (gameObject);
@@ -33,11 +34,10 @@ public class redY : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		if (cc.gameObject.tag == "blueWall") {
-			redMinHealth = redMinHealth - 1f;
-			if(redMinHealth <= 0){
+
 				Destroy (gameObject);
 
-			}
+
 		}
 		
 	}

@@ -6,6 +6,7 @@ public class redXSpawner : MonoBehaviour {
 	public Material activeMat;
 	public Material cooldownMat;
 	// Use this for initialization
+	private bool isCoolDown = false;
 	void Start () {
 	
 	}
@@ -19,5 +20,18 @@ public class redXSpawner : MonoBehaviour {
 			gameObject.GetComponent<Renderer> ().material = activeMat;
 		}
 
+	}
+	void OnCollisionEnter(Collision cc){
+		if (cc.gameObject.tag == "blueMinion") {
+			if(!isCoolDown){
+				blueGold.gold+= 100f;
+				isCoolDown = true;
+				Invoke("cooldownTimer",5f);
+			}
+		}
+	}
+	
+	void cooldownTimer(){
+		isCoolDown = false;
 	}
 }

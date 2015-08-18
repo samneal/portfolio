@@ -27,7 +27,7 @@ public class blueGold : MonoBehaviour {
 		float newConvert = goldPerSecond * 2;
 
 		goldText[0].text = "GR: " + newConvert.ToString() + " GPS";
-		goldText[1].text = "Bonus: " + goldMultiplyer.ToString() + "x";
+		goldText[1].text = "Min Cost: " + spawnBlue.minionCost.ToString();
 		goldText[2].text = gold.ToString ();
 	
 	}

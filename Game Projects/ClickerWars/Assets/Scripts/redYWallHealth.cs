@@ -24,14 +24,15 @@ public class redYWallHealth : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision cc){
 		if (cc.gameObject.tag == "blueMinion") {
-			enemyAttack = enemyMinion.GetComponent<blueY> ().blueMinAttack;
+			enemyAttack = spawnBlue.blueMinAttack;
 			blockHealth = blockHealth - enemyAttack;
 			currentHealth -= enemyAttack;
 			float calcHealth = currentHealth / playerHealth;
-			setHealthBar (calcHealth);
+			setHealthBar(calcHealth);
 			
 		}
 	}
+
 
 	public void setHealthBar(float myHealth){
 		healthBar.transform.localScale = new Vector3 (myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);

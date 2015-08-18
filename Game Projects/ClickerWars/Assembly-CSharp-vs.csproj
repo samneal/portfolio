@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\redGold.cs" />
      <Compile Include="Assets\Scripts\redHasHealth.cs" />
      <Compile Include="Assets\Scripts\redNexusHealth.cs" />
+     <Compile Include="Assets\Scripts\redShop.cs" />
      <Compile Include="Assets\Scripts\redX.cs" />
      <Compile Include="Assets\Scripts\redXSpawner.cs" />
      <Compile Include="Assets\Scripts\redXWallHealth.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\Scripts\redYWallHealth.cs" />
      <Compile Include="Assets\Scripts\spawnBlue.cs" />
      <Compile Include="Assets\Scripts\spawnRed.cs" />
+     <Compile Include="Assets\gameOver.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets\iTweenEditor\iTween.cs" />
      <Compile Include="Assets\iTweenEditor\iTweenEvent.cs" />
      <Compile Include="Assets\iTweenEditor\iTweenPath.cs" />
+     <Compile Include="Assets\worldRules.cs" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\iTweenEditor\README.txt" />

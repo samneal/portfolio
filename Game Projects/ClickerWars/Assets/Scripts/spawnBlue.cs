@@ -2,12 +2,13 @@
 using System.Collections;
 
 public class spawnBlue : MonoBehaviour {
-	public Transform blueX;
-	public Transform blueY;
-	public Transform blueB;
+	public GameObject blueX;
+	public GameObject blueY;
+	public GameObject blueB;
 
-	public static float blueMinHealth = 1f;
-	public static float blueMinAttack = 1f;
+	public static float minionCost = 5f;
+	public static float blueMinHealth = 5f;
+	public static float blueMinAttack = 5f;
 	// public Transform blueMinion;
 	public static float blueSpeed = 20f;
 	public static float blueYSpeed = 20f;
@@ -18,7 +19,7 @@ public class spawnBlue : MonoBehaviour {
 	public static bool bIsReady = true;
 //	bool BoneSawIsReady = always_true;
 
-	public static float coolDown = 1.0f;
+	public static float coolDown = 1f;
 	
 	bool showText = false;
 
@@ -30,37 +31,48 @@ public class spawnBlue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (xIsReady) {
-			if (Input.GetButtonDown ("xButton") || Input.GetKeyDown ("q")) {
+		if (blueShop.showShop) {
 
-				Instantiate (blueX, new Vector3 (-35.8f, 0, -65.4f), Quaternion.identity);
-				numClicks++;
-				xIsReady = false;
-				Invoke ("cooldownTimerX",coolDown);
+		} else {
+			if (xIsReady) {
+				if (Input.GetButtonDown ("xButton") || Input.GetKeyDown ("q")) {
+					if (blueGold.gold >= minionCost) {
+						Instantiate (blueX, new Vector3 (-66f, 0.1f, -180f), Quaternion.identity);
+						numClicks++;
+						blueGold.gold = blueGold.gold - minionCost;
+						xIsReady = false;
+						Invoke ("cooldownTimerX", coolDown);
 
 
+
+					}
+				}
 			}
-		}
-		if (yIsReady) {
-			if (Input.GetButtonDown ("yButton") || Input.GetKeyDown ("w")) {
+			if (yIsReady) {
+				if (Input.GetButtonDown ("yButton") || Input.GetKeyDown ("w")) {
+					if (blueGold.gold >= minionCost) {
+					Instantiate (blueY, new Vector3 (42f, 0.1f, -180f), Quaternion.identity);
+						numClicks++;
+						blueGold.gold = blueGold.gold - minionCost;
+						yIsReady = false;
+						Invoke ("cooldownTimerY", coolDown);
 
-				Instantiate (blueY, new Vector3 (0.9f, 0, -65.4f), Quaternion.identity);
-				numClicks++;
-				yIsReady = false;
-				Invoke ("cooldownTimerY",coolDown);
-
+					}
+				}
 			}
-		}
-		if (bIsReady) {
-			if (Input.GetButtonDown ("bButton") || Input.GetKeyDown ("e")) {
-
-				Instantiate (blueB, new Vector3 (34.2f, 0, -65.4f), Quaternion.identity);
-				numClicks++;
-				bIsReady = false;
-				Invoke ("cooldownTimerB",coolDown);
+			if (bIsReady) {
+				if (Input.GetButtonDown ("bButton") || Input.GetKeyDown ("e")) {
+					if (blueGold.gold >= minionCost) {
+						Instantiate (blueB, new Vector3 (145f, 0.1f, -180f), Quaternion.identity);
+						numClicks++;
+						blueGold.gold = blueGold.gold - minionCost;
+						bIsReady = false;
+						Invoke ("cooldownTimerB", coolDown);
+					}
+				}
 			}
-		}
 	
+		}
 	}
 
 	

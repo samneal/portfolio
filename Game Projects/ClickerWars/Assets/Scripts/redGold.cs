@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class redGold : MonoBehaviour {
 
-	public float gold = 0f;
+	public static float gold = 0f;
 	public float goldPerSecond = 1.0f;
 	public float goldMultiplyer = 1.0f;
 	public float minionBaseVal = 0f; 
@@ -27,7 +27,7 @@ public class redGold : MonoBehaviour {
 		float newConvert = goldPerSecond * 2;
 		
 		goldText[0].text = "GR: " + newConvert.ToString() + " GPS";
-		goldText[1].text = "Bonus: " + goldMultiplyer.ToString() + "x";
+		goldText[1].text = "Min Cost: " + spawnRed.minionCost.ToString();
 		goldText[2].text = gold.ToString ();
 		
 	}

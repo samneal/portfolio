@@ -24,7 +24,7 @@ public class redXWallHealth : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision cc){
 		if (cc.gameObject.tag == "blueMinion") {
-			enemyAttack = enemyMinion.GetComponent<blueX> ().blueMinAttack;
+			enemyAttack = spawnBlue.blueMinAttack;;
 			blockHealth = blockHealth - enemyAttack;
 			currentHealth -= enemyAttack;
 			float calcHealth = currentHealth / playerHealth;

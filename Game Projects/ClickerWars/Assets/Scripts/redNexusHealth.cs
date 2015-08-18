@@ -10,7 +10,7 @@ public class redNexusHealth : MonoBehaviour {
 
 	public GameObject minionX;
 	public GameObject minionY;
-	public GameObject minionZ;
+	public GameObject minionB;
 
 	private float enemyAttack;
 	private float calcHealth;
@@ -27,37 +27,20 @@ public class redNexusHealth : MonoBehaviour {
 
 		if (playerHealth <= 0) {
 
-			Destroy (gameObject);
+			Invoke ("blueWins",0.5f);
 		}
 	
 	}
 
 	void OnCollisionEnter(Collision cc){
 		if (cc.gameObject.tag == "blueMinion") {
-			if(cc.gameObject.name == "blueX"){
-			enemyAttack = minionX.GetComponent<blueX> ().blueMinAttack;
+
+			enemyAttack = spawnBlue.blueMinAttack;
 			playerHealth = playerHealth - enemyAttack;
 			currentHealth -= enemyAttack;
 			calcHealth = currentHealth / redHealth;
 			setHealthBar (calcHealth);
 			
-			}else if(cc.gameObject.name == "blueY"){
-				enemyAttack = minionY.GetComponent<blueY> ().blueMinAttack;
-				playerHealth = playerHealth - enemyAttack;
-				currentHealth -= enemyAttack;
-				calcHealth = currentHealth / redHealth;
-				setHealthBar (calcHealth);
-			
-			}else if(cc.gameObject.name == "blueB"){
-				enemyAttack = minionY.GetComponent<blueB> ().blueMinAttack;
-				playerHealth = playerHealth - enemyAttack;
-				currentHealth -= enemyAttack;
-				calcHealth = currentHealth / redHealth;
-				setHealthBar (calcHealth);
-			}
-
-
-		
 
 		}
 	}
@@ -65,5 +48,8 @@ public class redNexusHealth : MonoBehaviour {
 
 	public void setHealthBar(float myHealth){
 		healthBar.transform.localScale = new Vector3 (myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+	}
+	void blueWins(){
+		Application.LoadLevel ("blueWins");
 	}
 }
