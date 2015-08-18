@@ -72,8 +72,8 @@
      <Compile Include="Assets\Scripts\redY.cs" />
      <Compile Include="Assets\Scripts\redYSpawner.cs" />
      <Compile Include="Assets\Scripts\redYWallHealth.cs" />
-     <Compile Include="Assets\Scripts\spawnBlue.cs" />
-     <Compile Include="Assets\Scripts\spawnRed.cs" />
+     <Compile Include="Assets\Scripts\spawnBlue.Instance.cs" />
+     <Compile Include="Assets\Scripts\spawnRed.Instance.cs" />
      <Compile Include="Assets\gameOver.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />

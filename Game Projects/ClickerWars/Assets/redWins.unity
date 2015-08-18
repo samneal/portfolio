@@ -509,7 +509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Press B (controller) or \"e\" (Keyboard) \nto play again"
+  m_Text: Press "e" or "B" to play again.
 --- !u!222 &1276544279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -689,6 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1Go: {fileID: 1439738359}
   p2Go: {fileID: 1130665466}
+  levelIsLoaded: 0
 --- !u!4 &1995831103
 Transform:
   m_ObjectHideFlags: 0

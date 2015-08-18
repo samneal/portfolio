@@ -14,7 +14,7 @@ public class redYSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (!spawnRed.yIsReady) {
+		if (!spawnRed.Instance.yIsReady) {
 			gameObject.GetComponent<Renderer>().material = cooldownMat;
 		} else {
 			gameObject.GetComponent<Renderer> ().material = activeMat;
@@ -24,7 +24,7 @@ public class redYSpawner : MonoBehaviour {
 	void OnCollisionEnter(Collision cc){
 		if (cc.gameObject.tag == "blueMinion") {
 			if(!isCoolDown){
-				blueGold.gold+= 100f;
+				blueGold.Instance.gold+= 100f;
 				isCoolDown = true;
 				Invoke("cooldownTimer",5f);
 			}

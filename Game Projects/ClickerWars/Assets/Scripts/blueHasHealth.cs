@@ -3,7 +3,7 @@ using System.Collections;
 
 public class blueHasHealth : MonoBehaviour {
 
-	float hitPoints = spawnBlue.blueMinHealth;
+	float hitPoints = spawnBlue.Instance.blueMinHealth;
 	// Use this for initialization
 	void Start () {
 		

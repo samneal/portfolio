@@ -9,23 +9,23 @@ public class blueX : MonoBehaviour {
 	
 	public GameObject enemyMinion;
 	void Start () {
-		iTween.MoveTo(gameObject,iTween.Hash("path",iTweenPath.GetPath("blueXPath"),"time", spawnBlue.blueSpeed, "looptype", iTween.LoopType.none, "easetype", iTween.EaseType.linear,"movetopath", false));
+		iTween.MoveTo(gameObject,iTween.Hash("path",iTweenPath.GetPath("blueXPath"),"time", spawnBlue.Instance.blueSpeed, "looptype", iTween.LoopType.none, "easetype", iTween.EaseType.linear,"movetopath", false));
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		blueMinHealth = spawnBlue.blueMinHealth;
-		blueMinAttack = spawnBlue.blueMinAttack;
+		blueMinHealth = spawnBlue.Instance.blueMinHealth;
+		blueMinAttack = spawnBlue.Instance.blueMinAttack;
 	}
 	void OnCollisionEnter(Collision cc){
 		
 		if (cc.gameObject.tag == "redMinion" ) {
-			enemyAttack = spawnRed.redMinAttack;
+			enemyAttack = spawnRed.Instance.redMinAttack;
 			blueMinHealth = blueMinHealth - enemyAttack;
 			if(blueMinHealth <= 0){
 				Destroy (gameObject);
-				redGold.minionsKilled++;
+				redGold.Instance.minionsKilled++;
 			}
 		}
 

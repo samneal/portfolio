@@ -70,12 +70,12 @@ public class blueShop : MonoBehaviour {
 		itemText [21].text = itemDescrip[10];
 
 
-			if(blueGold.gold >= itemCost[0]){
+			if(blueGold.Instance.gold >= itemCost[0]){
 			if(showShop){
 			//	gameObject.GetComponent<Renderer>().material = activeShop1;
 				if (Input.GetButtonDown ("xButton") || Input.GetKeyDown ("q")) {
-				blueGold.gold = blueGold.gold - itemCost[0];
-				spawnBlue.blueMinAttack++;
+				blueGold.Instance.gold = blueGold.Instance.gold - itemCost[0];
+				spawnBlue.Instance.blueMinAttack++;
 					itemCost[0] = itemCost[0] + 100f;
 				}
 			}
@@ -83,28 +83,28 @@ public class blueShop : MonoBehaviour {
 						
 
 	
-		if(blueGold.gold >= itemCost[1]){
+		if(blueGold.Instance.gold >= itemCost[1]){
 		//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("yButton") || Input.GetKeyDown ("w")) {
 			
 		
-						blueGold.gold = blueGold.gold - itemCost[0];
-						spawnBlue.blueMinHealth++;
+						blueGold.Instance.gold = blueGold.Instance.gold - itemCost[0];
+						spawnBlue.Instance.blueMinHealth++;
 					itemCost[1] = itemCost[1] + 100f;
 			}
 			}
 			
 		}
 
-		if(blueGold.gold >= itemCost[2]){
+		if(blueGold.Instance.gold >= itemCost[2]){
 			//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("bButton") || Input.GetKeyDown ("e")) {
-					if(spawnBlue.minionCost >=1){
+					if(spawnBlue.Instance.minionCost >=1){
 						
-						blueGold.gold = blueGold.gold - itemCost[2];
-						spawnBlue.minionCost--;
+						blueGold.Instance.gold = blueGold.Instance.gold - itemCost[2];
+						spawnBlue.Instance.minionCost--;
 						itemCost[2] = itemCost[2] + 500f;
 					}else{
 						//Blur out shop item
@@ -114,14 +114,14 @@ public class blueShop : MonoBehaviour {
 			
 		}
 
-		if(blueGold.gold >= itemCost[3]){
+		if(blueGold.Instance.gold >= itemCost[3]){
 			//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("lbButton") || Input.GetKeyDown ("a")) {
-					if(spawnBlue.minionCost >=1){
+					if(spawnBlue.Instance.minionCost >=1){
 					
-					blueGold.gold = blueGold.gold - itemCost[2];
-					spawnBlue.minionCost--;
+					blueGold.Instance.gold = blueGold.Instance.gold - itemCost[2];
+					spawnBlue.Instance.minionCost--;
 					itemCost[3] = itemCost[3] + 500f;
 					}else{
 						//Blur out shop item
@@ -130,14 +130,14 @@ public class blueShop : MonoBehaviour {
 			}
 			
 		}
-		if(blueGold.gold >= itemCost[4]){
+		if(blueGold.Instance.gold >= itemCost[4]){
 			//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("rbButton") || Input.GetKeyDown ("s")) {
-					if(spawnBlue.minionCost >=1){
+					if(spawnBlue.Instance.minionCost >=1){
 						
-						blueGold.goldRate -= .05f;
-						spawnBlue.minionCost--;
+						blueGold.Instance.goldRate -= .05f;
+						spawnBlue.Instance.minionCost--;
 						itemCost[4] = itemCost[4] + 100f;
 					}else{
 						//Blur out shop item

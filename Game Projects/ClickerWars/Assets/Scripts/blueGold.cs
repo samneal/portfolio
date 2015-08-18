@@ -4,16 +4,18 @@ using UnityEngine.UI;
 
 public class blueGold : MonoBehaviour {
 
-	public static float gold = 0f;
+	public static blueGold Instance;
+	public float gold = 0f;
 	public float goldPerSecond = 1.0f;
 	public float goldMultiplyer = 1.0f;
 	public float minionBaseVal = 0f; 
-	public static float minionsKilled = 0f;
-	public static float goldRate = 0.5f;
+	public float minionsKilled = 0f;
+	public float goldRate = 0.5f;
 
 	public Text[] goldText;
 	// Use this for initialization
 	void Start () {
+		Instance = this;
 		goldText = gameObject.GetComponentsInChildren<Text>();
 		InvokeRepeating ("addGold", 0f, goldRate);
 	}
@@ -27,7 +29,7 @@ public class blueGold : MonoBehaviour {
 		float newConvert = goldPerSecond * 2;
 
 		goldText[0].text = "GR: " + newConvert.ToString() + " GPS";
-		goldText[1].text = "Min Cost: " + spawnBlue.minionCost.ToString();
+		goldText[1].text = "Min Cost: " + spawnBlue.Instance.minionCost.ToString();
 		goldText[2].text = gold.ToString ();
 	
 	}
@@ -37,4 +39,5 @@ public class blueGold : MonoBehaviour {
 		gold = gold + goldToAdd;
 
 	}
+
 }

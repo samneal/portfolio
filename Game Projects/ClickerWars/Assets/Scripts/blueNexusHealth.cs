@@ -31,7 +31,7 @@ public class blueNexusHealth : MonoBehaviour {
 	void OnCollisionEnter(Collision cc){
 		if (cc.gameObject.tag == "redMinion") {
 			
-			enemyAttack = spawnRed.redMinAttack;
+			enemyAttack = spawnRed.Instance.redMinAttack;
 			playerHealth = playerHealth - enemyAttack;
 			currentHealth -= enemyAttack;
 			calcHealth = currentHealth / blueHealth;

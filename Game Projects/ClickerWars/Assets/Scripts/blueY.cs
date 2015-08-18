@@ -10,25 +10,25 @@ public class blueY : MonoBehaviour {
 	public GameObject enemyMinion;
 	// Use this for initialization
 	void Start () {
-		iTween.MoveTo(gameObject,iTween.Hash("path",iTweenPath.GetPath("blueYPath"),"time", spawnBlue.blueYSpeed, "looptype", iTween.LoopType.none, "easetype", iTween.EaseType.linear,"movetopath", false));
+		iTween.MoveTo(gameObject,iTween.Hash("path",iTweenPath.GetPath("blueYPath"),"time", spawnBlue.Instance.blueYSpeed, "looptype", iTween.LoopType.none, "easetype", iTween.EaseType.linear,"movetopath", false));
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		blueMinHealth = spawnBlue.blueMinHealth;
-		blueMinAttack = spawnBlue.blueMinAttack;
+		blueMinHealth = spawnBlue.Instance.blueMinHealth;
+		blueMinAttack = spawnBlue.Instance.blueMinAttack;
 
 	}
 
 	void OnCollisionEnter(Collision cc){
 		
 		if (cc.gameObject.tag == "redMinion" ) {
-			enemyAttack = spawnRed.redMinAttack;
+			enemyAttack = spawnRed.Instance.redMinAttack;
 			blueMinHealth = blueMinHealth - enemyAttack;
 			if(blueMinHealth <= 0){
 				Destroy (gameObject);
-				redGold.minionsKilled++;
+				redGold.Instance.minionsKilled++;
 			}
 		}
 		

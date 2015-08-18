@@ -3,7 +3,7 @@ using System.Collections;
 
 public class redHasHealth : MonoBehaviour {
 
-	float hitPoints = spawnRed.redMinHealth;
+	float hitPoints = spawnRed.Instance.redMinHealth;
 	// Use this for initialization
 	void Start () {
 		

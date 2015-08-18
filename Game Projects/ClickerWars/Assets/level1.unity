@@ -415,9 +415,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7920f91befb6a3f49999a1617b7903ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 0
   goldPerSecond: 1
   goldMultiplyer: 1
   minionBaseVal: 0
+  minionsKilled: 0
+  goldRate: .5
   goldText: []
 --- !u!1 &95021017
 GameObject:
@@ -1749,9 +1752,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fbf045e87643e44b65725a44cb56a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 0
   goldPerSecond: 1
   goldMultiplyer: 1
   minionBaseVal: 0
+  minionsKilled: 0
+  goldRate: .5
   goldText: []
 --- !u!114 &392411015
 MonoBehaviour:
@@ -3560,6 +3566,15 @@ MonoBehaviour:
   redX: {fileID: 164078, guid: 94e028dadb9645a44a08d6c2f87185b5, type: 2}
   redY: {fileID: 137142, guid: ba104e40d7a0bc74aa309e9e14622b7f, type: 2}
   redB: {fileID: 168130, guid: cb9a2c0131127e545a9363f16ff6b200, type: 2}
+  minionCost: 5
+  redMinHealth: 5
+  redMinAttack: 5
+  redSpeed: 20
+  redYSpeed: 20
+  coolDown: 1
+  xIsReady: 1
+  yIsReady: 1
+  bIsReady: 1
 --- !u!114 &677106161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7643,6 +7658,15 @@ MonoBehaviour:
   blueX: {fileID: 193544, guid: 0e66dd2aa782f4744b28181ed4f3fe31, type: 2}
   blueY: {fileID: 157270, guid: 18b885aa2c5838b439848bfcbb2797e3, type: 2}
   blueB: {fileID: 130352, guid: ba5141eeaf7df0544a9dac0b0c2a0fe5, type: 2}
+  minionCost: 5
+  blueMinHealth: 5
+  blueMinAttack: 5
+  blueSpeed: 20
+  blueYSpeed: 20
+  xIsReady: 1
+  yIsReady: 1
+  bIsReady: 1
+  coolDown: 1
 --- !u!114 &1707312309
 MonoBehaviour:
   m_ObjectHideFlags: 0

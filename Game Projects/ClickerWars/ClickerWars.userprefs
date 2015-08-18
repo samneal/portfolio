@@ -1,29 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\iTweenEditor\iTweenPath.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\spawnBlue.cs">
     <Files>
-      <File FileName="Assets\iTweenEditor\iTweenPath.cs" Line="16" Column="2" />
-      <File FileName="Assets\Scripts\redYWallHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redXWallHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueX.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redY.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redX.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redB.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueY.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueB.cs" Line="1" Column="1" />
-      <File FileName="Assets\iTweenEditor\iTween.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueBWallHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueYWallHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueNexusHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redNexusHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\spawnBlue.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\spawnRed.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redGold.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueGold.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\redShop.cs" Line="1" Column="1" />
-      <File FileName="Assets\worldRules.cs" Line="1" Column="1" />
-      <File FileName="Assets\gameOver.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blueShop.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\spawnBlue.cs" Line="36" Column="3" />
+      <File FileName="Assets\Scripts\blueHasHealth.cs" Line="2" Column="26" />
+      <File FileName="Assets\Scripts\redHasHealth.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -70,12 +70,12 @@ public class redShop : MonoBehaviour {
 		itemText [21].text = itemDescrip[10];
 
 
-			if(redGold.gold >= itemCost[0]){
+			if(redGold.Instance.gold >= itemCost[0]){
 			if(showShop){
 			//	gameObject.GetComponent<Renderer>().material = activeShop1;
 				if (Input.GetButtonDown ("p2xButton") || Input.GetKeyDown ("i")) {
-				redGold.gold = redGold.gold - itemCost[0];
-				spawnRed.redMinAttack++;
+				redGold.Instance.gold = redGold.Instance.gold - itemCost[0];
+				spawnRed.Instance.redMinAttack++;
 					itemCost[0] = itemCost[0] + 100f;
 				}
 			}
@@ -83,28 +83,28 @@ public class redShop : MonoBehaviour {
 						
 
 	
-		if(redGold.gold >= itemCost[1]){
+		if(redGold.Instance.gold >= itemCost[1]){
 		//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("p2yButton") || Input.GetKeyDown ("o")) {
 			
 		
-						redGold.gold = redGold.gold - itemCost[0];
-						spawnRed.redMinHealth++;
+						redGold.Instance.gold = redGold.Instance.gold - itemCost[0];
+						spawnRed.Instance.redMinHealth++;
 					itemCost[1] = itemCost[1] + 100f;
 			}
 			}
 			
 		}
 
-		if(redGold.gold >= itemCost[2]){
+		if(redGold.Instance.gold >= itemCost[2]){
 			//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("p2bButton") || Input.GetKeyDown ("p")) {
-					if(spawnRed.minionCost >=1){
+					if(spawnRed.Instance.minionCost >=1){
 						
-						redGold.gold = redGold.gold - itemCost[2];
-						spawnRed.minionCost--;
+						redGold.Instance.gold = redGold.Instance.gold - itemCost[2];
+						spawnRed.Instance.minionCost--;
 						itemCost[2] = itemCost[2] + 500f;
 					}else{
 						//Blur out shop item
@@ -114,14 +114,14 @@ public class redShop : MonoBehaviour {
 			
 		}
 
-		if(redGold.gold >= itemCost[3]){
+		if(redGold.Instance.gold >= itemCost[3]){
 			//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("p2lbButton") || Input.GetKeyDown ("j")) {
-					if(spawnRed.minionCost >=1){
+					if(spawnRed.Instance.minionCost >=1){
 					
-					redGold.gold = redGold.gold - itemCost[2];
-					spawnRed.minionCost--;
+					redGold.Instance.gold = redGold.Instance.gold - itemCost[2];
+					spawnRed.Instance.minionCost--;
 					itemCost[3] = itemCost[3] + 500f;
 					}else{
 						//Blur out shop item
@@ -130,14 +130,14 @@ public class redShop : MonoBehaviour {
 			}
 			
 		}
-		if(redGold.gold >= itemCost[4]){
+		if(redGold.Instance.gold >= itemCost[4]){
 			//	gameObject.GetComponent<Renderer>().material = activeShop2;
 			if(showShop){
 				if (Input.GetButtonDown ("p2rbButton") || Input.GetKeyDown ("k")) {
-					if(spawnRed.minionCost >=1){
+					if(spawnRed.Instance.minionCost >=1){
 						
-						redGold.goldRate -= .05f;
-						spawnRed.minionCost--;
+						redGold.Instance.goldRate -= .05f;
+						spawnRed.Instance.minionCost--;
 						itemCost[4] = itemCost[4] + 100f;
 					}else{
 						//Blur out shop item

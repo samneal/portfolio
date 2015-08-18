@@ -24,7 +24,7 @@ public class redYWallHealth : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision cc){
 		if (cc.gameObject.tag == "blueMinion") {
-			enemyAttack = spawnBlue.blueMinAttack;
+			enemyAttack = spawnBlue.Instance.blueMinAttack;
 			blockHealth = blockHealth - enemyAttack;
 			currentHealth -= enemyAttack;
 			float calcHealth = currentHealth / playerHealth;
